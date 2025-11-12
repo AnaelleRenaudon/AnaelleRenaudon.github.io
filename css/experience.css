@@ -1,0 +1,214 @@
+body {
+    background-color: #e8c9ce;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 150vh;
+}
+html{
+    scroll-behavior: smooth;
+}
+.beau-bouton-div {
+    margin: auto;
+    text-align: center;
+}
+.beau-bouton {
+  text-align: center;
+  border-radius: 5px;
+  margin: auto;
+  text-decoration: none;
+  background-color: #000000;
+  color: #e8c9ce;
+  padding: 6px 10px;
+  border: 1px solid #000000;
+}
+.beau-bouton:hover{
+  padding: 8px 12px;
+}
+
+.work-title h1 {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 0;
+    padding: 20px;
+}
+
+.travail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.element-experience {
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.element-experience:hover {
+    transform: scale(1.05);
+}
+
+.element-experience h2 {
+    margin: 0 0 10px 0;
+}
+
+.element-experience p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.element-experience p::before {
+    content: "• ";
+    font-size: 24px;
+    color: black;
+}
+
+.interest-title h1 {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+}
+
+.interest-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+    margin-top: 20px;
+}
+
+.element-interest {
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.element-interest:hover {
+    transform: scale(1.05);
+}
+
+.element-interest p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.element-interest p::before {
+    font-size: 26px;
+    color: black;
+}
+
+.experience-image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.experience-image:hover {
+    filter: grayscale(0%);
+}
+
+
+.experience-image.top-left {
+    position: absolute;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    top: 5px;
+    left: 35px;
+    width: 250px;
+}
+
+.experience-image.bottom-right {
+    position: absolute;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    top: 110px; 
+    bottom: initial;
+    right: 130px; 
+    width: 250px;
+}
+
+.interest-image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    width: 200px;
+    height: auto;
+}
+
+.interest-image:hover {
+    filter: grayscale(0%);
+}
+
+
+.interest-image.left {
+    position: absolute;
+    left: 170px;
+    bottom: -350px; 
+    width: 235px;
+    height: auto;
+}
+
+
+.interest-image.right {
+    position: absolute;
+    right: 70px;
+    bottom: -370px; 
+    width: 200px;
+    height: auto;
+}
+
+
+
+
+
+@media (max-width: 1300px) {
+    
+    .work-title h1, .interest-title h1 {
+        font-size: 50px; 
+    }
+
+    
+    .element-experience, .element-interest {
+        width: 90%; 
+        max-width: none;
+    }
+
+    
+    .experience-image.top-left, 
+    .experience-image.bottom-right, 
+    .interest-image.left, 
+    .interest-image.right {
+        
+        display: none; 
+    }
+    
+    
+    .beau-bouton-div {
+        margin: 0;
+        text-align: right;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .beau-bouton {
+        font-size: 14px;
+    }
+}

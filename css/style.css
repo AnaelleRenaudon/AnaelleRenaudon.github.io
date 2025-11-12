@@ -1,0 +1,284 @@
+html {
+    scroll-behavior: smooth;
+        height: 100%;
+}
+
+header {
+    padding: 1rem 0;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../IMAGES/leopard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e8c9ce;
+}
+
+#titre{
+    margin: 30PX 0 0 0;
+}
+
+#accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #e8c9ce;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#accueil h1 {
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 15px;
+    color: #e8c9ce;
+    margin: 0px 0 0 0;
+    text-align: center;
+}
+
+#accueil .sous-titre {
+    font-size: 25px;
+    color:#e8c9ce;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+    text-align: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    max-width: 90%;
+    line-height: 2.2;
+}
+
+footer{
+    color: #e8c9ce;
+    text-align: center;
+}
+.education{
+    font-family: "EB Garamond", sans-serif;
+}
+
+.education img{
+    border-radius: 0;
+    max-width: 130px;
+}
+
+.reseauxlogos{
+    justify-content: center;
+    width: 20%;
+    min-width: 100px;
+    text-align: center;
+    margin:10px auto 10px auto;
+    display:flex !important;
+}
+.hrefrezo{
+    color:white;
+}
+
+.reseau i{
+    font-size:40px;
+    margin:10px;
+    transition-duration: 0.5s;
+}
+.reseau i:hover{
+    color: #e8c9ce;
+}
+.reseau .plusvin::before{
+    margin:0px 10px 0px 10px;
+}
+
+
+#menuToggle
+{
+  display: none; 
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 100;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: #e8c9ce; 
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: fixed;
+  max-width: 400px;
+  width: 100vw;
+  max-height: 100vh;
+  margin: -100px 0 0 -50px; 
+  padding: 50px;
+  padding-top: 125px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}  
+
+.mobile-only-menu {
+    display: none; 
+}
+
+.desktop-only-nav {
+    display: block; 
+}
+
+@media (max-width: 768px) {
+    
+    
+    .desktop-only-nav { 
+        display: none; 
+    }
+    
+    .mobile-only-menu {
+        display: block;
+    }
+    
+    #menuToggle {
+        display: block;
+        top: 20px; 
+        left: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    
+    
+    #accueil h1 {
+        font-size: 40px; 
+        letter-spacing: 8px;
+        margin-top: 0;
+    }
+    
+    #accueil .sous-titre {
+        font-size: 20px; 
+        padding-left: 1rem;
+        padding-right: 1rem;
+        line-height: 1.8;
+    }
+    
+    
+    .reseau i {
+        font-size: 30px;
+    }
+}
