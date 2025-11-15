@@ -1,0 +1,255 @@
+body {
+    background-color: #e8c9ce;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 150vh;
+}
+html{
+    scroll-behavior: smooth;
+}
+.beau-bouton-div {
+    margin: auto;
+    text-align: center;
+}
+.beau-bouton {
+  text-align: center;
+  border-radius: 5px;
+  margin: auto;
+  text-decoration: none;
+  background-color: #000000;
+  color: #e8c9ce;
+  padding: 6px 10px;
+  border: 1px solid #000000;
+}
+.beau-bouton:hover{
+  padding: 8px 12px;
+}
+
+.work-title h1 {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 0;
+    padding: 20px;
+}
+
+.travail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.element-experience {
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.element-experience:hover {
+    transform: scale(1.05);
+}
+
+.element-experience h2 {
+    margin: 0 0 10px 0;
+}
+
+.element-experience p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.element-experience p::before {
+    content: "â€¢ ";
+    font-size: 24px;
+    color: black;
+}
+
+.interest-title h1 {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+}
+
+.interest-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+    margin-top: 20px;
+}
+
+.element-interest {
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.element-interest:hover {
+    transform: scale(1.05);
+}
+
+.element-interest p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.element-interest p::before {
+    font-size: 26px;
+    color: black;
+}
+
+.experience-image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.experience-image:hover {
+    filter: grayscale(0%);
+}
+
+
+.experience-image.top-left {
+    position: absolute;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    top: 5px;
+    left: 35px;
+    width: 250px;
+}
+
+.experience-image.bottom-right {
+    position: absolute;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    top: 110px;
+    bottom: initial;
+    right: 100px;
+    width: 250px;
+}
+
+.interest-image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    width: 200px;
+    height: auto;
+}
+
+.interest-image:hover {
+    filter: grayscale(0%);
+}
+
+
+.interest-image.left {
+    position: absolute;
+    left: 170px;
+    bottom: -350px;
+    width: 200px;
+    height: auto;
+}
+
+
+.interest-image.right {
+    position: absolute;
+    right: 70px;
+    bottom: -370px;
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease,
+        transform 0.3s ease;
+}
+
+#menu li {
+    margin: 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 4px 10px;
+    display: block;
+}
+
+#menu-toggle:checked + label + #menu {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-icon {
+    font-size: 45px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+#menu-toggle:checked ~ #menu {
+    background-color: #e8c9ce;
+    transition: 0.1s ease;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid black;
+}
+
+#menu-toggle:checked ~ .menu-icon {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    background-color: #e8c9ce;
+    transition: 0.1s ease;
+    margin: 0 0 -1px 0;
+    border: 1px solid black
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+@media (max-width: 1350PX) {
+    .experience-image{
+        display: none;
+    }
+}
+
+@media (max-width: 1044PX) {
+    .interest-image{
+        display: none;
+    }
+}

@@ -1,0 +1,243 @@
+body {
+    background-color: #e8c9ce;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 150vh;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+@keyframes TourniTourni {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+            transform: rotate(1080deg)
+    }
+}
+.work-title h1 {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 20px 0 0 0;
+    padding: 20px;
+}
+.beau-bouton-div {
+    margin: auto;
+    text-align: center;
+}
+.beau-bouton {
+  text-align: center;
+  border-radius: 5px;
+  margin: auto;
+  text-decoration: none;
+  background-color: #000000;
+  color: #e8c9ce;
+  padding: 6px 10px;
+  border: 1px solid #000000;
+}
+.beau-bouton:hover{
+  padding: 8px 12px;
+}
+
+
+.travail-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.element-experience {
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    width: 300px;
+    animation: 1s ease-out 0s 1 TourniTourni;
+}
+
+
+.element-experience:hover {
+    transform: scale(1.03);
+}
+
+.element-experience h2 {
+    margin: 0 0 10px 0;
+}
+
+.element-experience p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.element-experience p::before {
+    content: "";
+    font-size: 24px;
+    color: black;
+}
+
+.interest-title h1 {
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+}
+
+
+.interest-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 20px 20px 20px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.element-interest {
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    width: 250px;
+    animation: 1s ease-out 0s 1 TourniTourni;
+}
+
+#roundborders .element-interest{
+    border-radius: 20px;
+}
+
+.element-interest:hover {
+    transform: scale(1.03);
+}
+
+
+.element-interest.active-case {
+    border-color: black;
+    cursor: pointer;
+}
+.element-interest.active-case:hover {
+    border-color: red;
+    border-width: 7px;
+}
+
+.element-interest p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.element-interest p::before {
+    font-size: 26px;
+    color: black;
+}
+
+
+@media (max-width: 1028PX) {
+    .work-title h1, .interest-title h1 {
+        font-size: 50px;
+    }
+
+   
+    .element-experience, .element-interest {
+       
+        width: 90%;
+        max-width: none;
+    }
+   
+   
+    .beau-bouton-div {
+        margin: 0;
+        text-align: right;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .beau-bouton {
+        font-size: 14px;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease,
+        transform 0.3s ease;
+}
+
+#menu li {
+    margin: 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 4px 10px;
+    display: block;
+}
+
+#menu-toggle:checked + label + #menu {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-icon {
+    font-size: 45px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+#menu-toggle:checked ~ #menu {
+    background-color: #e8c9ce;
+    transition: 0.1s ease;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid black;
+}
+
+#menu-toggle:checked ~ .menu-icon {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    background-color: #e8c9ce;
+    transition: 0.1s ease;
+    margin: 0 0 -1px 0;
+    border: 1px solid black
+}
+
+input[type=checkbox] {
+    display: none; 
+}
